@@ -3,34 +3,36 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background-color: white;   /* or black later */
+  background-color: white; /* change back to black when ready */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* row of 3 vids */
+/* Row of 3 videos */
 .stage {
   width: 100%;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   padding: 0 5vw;
   box-sizing: border-box;
 }
 
-/* left + right spinning circles */
+/* LEFT + RIGHT spinning circle videos */
 video.spin {
   width: 220px;
   height: 220px;
-  border-radius: 50%;
+  border-radius: 50%;   /* circle */
   object-fit: cover;
 }
 
-/* center rectangle video */
+/* CENTER rectangle video */
 video.center-text {
-  width: 35vw;        /* responsive width for horizontal text */
-  max-width: 550px;   /* stops it from getting too huge */
-  border-radius: 10px;
-  object-fit: cover;
+  width: 40vw;          /* responsive width */
+  max-width: 600px;     /* prevent being too big */
+  height: auto;         /* keep natural rectangular shape */
+  border-radius: 0;     /* <-- removes the circle */
+  object-fit: contain;  /* keeps full image without cropping */
+  background: black;    /* optional clean background behind it */
 }
