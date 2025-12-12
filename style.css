@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: black;
+  background: white;
   height: 100vh;
   display: flex;
   justify-content: center;   /* centers the whole row horizontally */
@@ -22,4 +22,5 @@ video {
   border-radius: 100%;
   object-fit: cover;
 }
+
 
