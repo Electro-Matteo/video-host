@@ -1,53 +1,24 @@
-/* page */
-html,body {
-  height: 100%;
+body {
   margin: 0;
-  background: #000; /* black background */
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-}
-
-/* overall stage (centered vertically) */
-.stage {
+  background: black;
   height: 100vh;
   display: flex;
-  align-items: center;           /* vertical centering */
-  justify-content: center;       /* keeps layout centered horizontally */
-  padding: 0 5vw;                /* side padding so they don't touch edges */
-  box-sizing: border-box;
+  justify-content: center;   /* centers the whole row horizontally */
+  align-items: center;       /* centers it vertically */
 }
 
-/* left & right slots: keep them at edges of the available width */
-.left-slot,
-.right-slot {
+/* force videos into a horizontal row */
+.row {
+  width: 90%;
   display: flex;
+  justify-content: space-between;  /* pushes videos to edges */
   align-items: center;
-  justify-content: center;
-  flex: 0 0 auto; /* fixed size slots */
 }
 
-/* the middle empty space — controls how far apart they are */
-.center-space {
-  flex: 1 1 auto;     /* takes remaining space, pushing the videos outwards */
-  min-width: 80px;    /* minimum middle gap */
-}
-
-/* video style - circle and size */
+/* video styling */
 video {
-  width: 240px;            /* <--- change this value to make them larger/smaller */
-  height: 240px;           /* keeps perfect circle */
+  width: 250px;      /* change size here */
+  height: 250px;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
-  box-shadow: 0 0 24px rgba(255,255,255,0.03); /* subtle glow */
-}
-
-/* responsive: stack on small screens */
-@media (max-width: 680px) {
-  .stage {
-    flex-direction: column;
-    gap: 28px;
-    padding: 4vh 4vw;
-  }
-  .center-space { display: none; } /* no center gap when stacked */
-  video { width: 200px; height: 200px; }
 }
