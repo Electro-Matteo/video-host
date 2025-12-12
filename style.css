@@ -1,26 +1,36 @@
 body {
   margin: 0;
-  background: white;
+  padding: 0;
   height: 100vh;
+  width: 100vw;
+  background-color: white;   /* or black later */
   display: flex;
-  justify-content: center;   /* centers the whole row horizontally */
-  align-items: center;       /* centers it vertically */
-}
-
-/* force videos into a horizontal row */
-.row {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;  /* pushes videos to edges */
+  justify-content: center;
   align-items: center;
 }
 
-/* video styling */
-video {
-  width: 250px;      /* change size here */
-  height: 250px;
-  border-radius: 100%;
+/* row of 3 vids */
+.stage {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 0 5vw;
+  box-sizing: border-box;
+}
+
+/* left + right spinning circles */
+video.spin {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
   object-fit: cover;
 }
 
-
+/* center rectangle video */
+video.center-text {
+  width: 35vw;        /* responsive width for horizontal text */
+  max-width: 550px;   /* stops it from getting too huge */
+  border-radius: 10px;
+  object-fit: cover;
+}
