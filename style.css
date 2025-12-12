@@ -7,17 +7,16 @@ body {
   height: 100vh;
 }
 
-.grid {
-  display: grid;
-  gap: 40px;
-  grid-template-columns: repeat(2, 1fr);
-  width: 80%;
-  max-width: 1200px;
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between; /* pushes them to left/right */
+  align-items: center;
 }
 
 video {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 350px;         /* adjust size here */
+  height: 350px;        /* keeps perfect circle */
   border-radius: 50%;
   object-fit: cover;
 }
